@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca de Filmes de 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Busca de Filmes de 2024</h1>
+    <div class="barra-titulo"></div>
+    <div class="busca-container">
+        <input type="text" id="busca" placeholder="Digite o nome do filme">
+        <button onclick="buscarFilme()">Buscar</button>
+    </div>
+    <div class="fundo"></div>
+    <div class="filmes" id="filmes">
+        <div class="filme" data-titulo="Deadpool & Wolverine">
+            <img src="OIP.jpeg" alt="Deadpool & Wolverine">
+            <h3 onmouseover="mostrarLink(this)" onmouseout="esconderLink(this)">
+                Deadpool & Wolverine
+                <a href="https://www.adorocinema.com/filmes/filme-146349/" class="link-filme" style="display:none; font-size: 0.8em;">Saiba mais</a>
+            </h3>
+        </div>
+        <div class="filme" data-titulo="Bad Boys: Até o Fim">
+            <img src="OIP (1).jpg" alt="Bad Boys: Até o Fim">
+            <h3 onmouseover="mostrarLink(this)" onmouseout="esconderLink(this)">
+                Bad Boys
+                <a href="https://www.adorocinema.com/filmes/filme-240014/" class="link-filme" style="display:none; font-size: 0.8em;">Saiba mais</a>
+            </h3>
+        </div>
+        <div class="filme" data-titulo="Planeta dos macacos Reinado">
+            <img src="OIP (2).jpg" alt="Planeta dos macacos Reinado">
+            <h3 onmouseover="mostrarLink(this)" onmouseout="esconderLink(this)">
+               O Reinado
+                <a href="https://www.adorocinema.com/pesquisar/?q=o+reinado" class="link-filme" style="display:none; font-size: 0.8em;">Saiba mais</a>
+            </h3>
+        </div>
+        <div class="filme" data-titulo="Kung fu Panda 4">
+            <img src="download.jpg" alt="Kung fu Panda 4">
+            <h3 onmouseover="mostrarLink(this)" onmouseout="esconderLink(this)">
+                Kung fu Panda 4
+                <a href="https://www.adorocinema.com/filmes/filme-306226/" class="link-filme" style="display:none; font-size: 0.8em;">Saiba mais</a>
+            </h3>
+        </div>
+        <div class="filme" data-titulo="Meu Malvado Favorito 4">
+            <img src="OIP (3).jpg" alt="Meu Malvado Favorito 4">
+            <h3 onmouseover="mostrarLink(this)" onmouseout="esconderLink(this)">
+                Meu Malvado Favorito 4
+                <a href="https://www.adorocinema.com/filmes/filme-257257/" class="link-filme" style="display:none; font-size: 0.8em;">Saiba mais</a>
+            </h3>
+        </div>
+        <div class="filme" data-titulo="One piece">
+            <img src="download (1).jpg" alt="One piece">
+            <h3 onmouseover="mostrarLink(this)" onmouseout="esconderLink(this)">
+                One piece
+                <a href="https://www.adorocinema.com/series/serie-22408/" class="link-filme" style="display:none; font-size: 0.8em;">Saiba mais</a>
+            </h3>
+        </div>
+    </div>
+    <footer>
+        <p>Todos os direitos reservados. 2024 @brenynrlk</p>
+    </footer>
+    <script>
+        function buscarFilme() {
+            const busca = document.getElementById('busca').value.toLowerCase();
+            const filmes = document.querySelectorAll('.filme');
+            
+            filmes.forEach(filme => {
+                const titulo = filme.getAttribute('data-titulo').toLowerCase();
+                if (titulo.includes(busca)) {
+                    filme.style.display = 'block';
+                } else {
+                    filme.style.display = 'none';
+                }
+            });
+        }
+
+        function mostrarLink(element) {
+            const link = element.querySelector('.link-filme');
+            link.style.display = 'inline';
+        }
+
+        function esconderLink(element) {
+            const link = element.querySelector('.link-filme');
+            link.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+</html>

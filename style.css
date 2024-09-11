@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #080808;
+}
+
+.filmes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.filme {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #fffcfc;
+    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.3);
+}
+.fundo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(''); /* Substitua por seu caminho de imagem */
+    background-size: cover; /* Faz com que a imagem preencha todo o espaço, recortando-a se necessário */
+    z-index: -1; /* Coloca a imagem atrás dos outros elementos */
+  }
+.filme img {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+.filmes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.filme {
+    width: calc(33.33% - 20px); /* Cada quadrado ocupará cerca de 33% da largura */
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.filme img {
+    width: 100%;
+}
+.busca-container {
+    display: flex; /* Organiza os elementos em linha */
+    align-items: center; /* Alinha os elementos verticalmente no centro */
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 5px; /* Arredonda as bordas */
+    padding: 10px;
+}
+
+
+    
+    #busca {
+        flex: 1;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+button {
+    padding: 11px 20px;
+    background-color: #03d109; /* Verde */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.barra-titulo {
+    height: 75px; /* Ajuste a altura para cobrir o nome por completo */
+    background-color: #ccc;
+    width: 100%; /* Faz com que a barra ocupe toda a largura da página */
+    position: absolute; /* Posiciona a barra absolutamente */
+    top: 0; /* Posiciona a barra no topo da página */
+    left: 0; /* Posiciona a barra à esquerda da página */
+    z-index: -1; /* Coloca a barra atrás do título */
+    
+        border: 1px solid #ccc; /* Adiciona uma borda sólida cinza de 2px */
+        border-radius: 5px; /* Arredonda os cantos em 10 pixels */
+      
+}
+
+h1 {
+    position: relative; /* Torna o título um elemento de posicionamento relativo */
+}
+.filme {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas */
+    position: relative; /* Posiciona o conteúdo dentro da div */
+}
+
+.filme img {
+    width: 100%;
+    height: 250px; /* Aumenta a altura da imagem */
+    object-fit: cover; /* Faz com que a imagem preencha todo o espaço disponível, recortando-a se necessário */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito hover */
+}
+
+.filme:hover img {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+}
+.filme h3 {
+    margin-top: 10px; /* Adiciona um espaçamento de 10 pixels acima do título */
+    color: #ccc9c9; /* Define a cor do título como cinza escuro */
+}
+/* ... seu código CSS existente ... */
+
